@@ -1,0 +1,16 @@
+﻿@page "/counter"
+@using global::Shared
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<SomeTestComponent SomeClasses="Data"></SomeTestComponent>
+
+@code {
+    private List<SomeClass> Data { get; set; } = [];
+    protected override void OnInitialized()
+    {
+        Data.Add(new());
+        base.OnInitialized();
+    }
+}
